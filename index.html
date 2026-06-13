@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Agustin E. Cuevas</title>
 
 </head>
@@ -49,7 +50,7 @@
     </header>
     <main>
         <div class="principal__container">
-            <section class="section_skills" id="skills">
+            <section class="section_skills" id="skills" data-aos="fade-up">
                 <h2>SE QUE PUEDO SERTE UTIL</h2>
                     <h3>Dominio <strong>AVANZADO</strong> de los lenguajes de programacion mas inportantes en cualquier pagina web </h3>
                         <div class="section_skills__grid">
@@ -62,20 +63,20 @@
                         </div>
             </section>    
             <section class="section_responsive">
-                    <div class="section_responsive__container">
+                    <div class="section_responsive__container" data-aos="fade-up">
                         <h3>Diseño Responsive</h3>
                         <p>Adaptacion a todos los Dispositivos</p>
                             <img src="./IMGs/Fone.png" alt="Foto de un Celular con una pagina web dentro" title="Celular Diseño Resposive" class="section_responsive__img">
                             </img>
                     </div>
-                    <div class="section_responsive__container">
+                    <div class="section_responsive__container" data-aos="fade-up">
                         <h3>Accesibilidad</h3>
                         <p>Diseño inclusivo que garantiza la experiencia para todos</p>
                         <img src="./IMGs/Accesibilidad.png" alt="Foto ilustrativa sobre accesibilidad web" title="Accesibilidad Web" class="section_responsive__img img--accesweb" >
                     </div>
             </section>
             <section class="section_empresas">
-                <div class="container__empresass">    
+                <div class="container__empresas" data-aos="fade-up">    
                     <h3>¿TIENES UNA EMPRESA O NEGOCIO?</h3>
                     <a class="section_empresas__link" href="./Empresa/index.html">Haz Click Aqui</a>
                 </div>
@@ -84,50 +85,53 @@
                 <h2>PROJECTOS Y TRABAJOS</h2>
                 <h3>Clientes 100% satisfechos</h3>
                 <div class="section_projects__grid">
-                    <div class="section_project__container container--km">
+                    <div class="section_project__container container--km" data-aos="fade-up">
                         <div class="container__overlay">
                             <h3>Keanu Moda</h3>
+                            <h4>E-Commerce</h4>
                     <a href="https://keanumoda.mitiendanube.com/" target="_blank" class="section_projects__item"></a>
                     </div>
                     </div>
-                    <div class="section_project__container">
+                    <div class="section_project__container container--bd" data-aos="fade-up">
+                            <div class="container__overlay">
+                            <h3>BIG DESIGN</h3>
+                            <h4>Diseño Moderno</h4>
+                    <a href="https://agustincuevas1.github.io/BigDesign-Proyect/" target="_blank" class="section_projects__item"></a>
+                    </div>
+                    </div>
+                    <div class="section_project__container container--sp" data-aos="fade-up">
+                            <div class="container__overlay">
+                            <h3>Portafolio</h3>
+                            <h4>Perfil Digital</h4>
+                    <a href="https://agustincuevas1.github.io/sample-portfolio/" class="section_projects__item"></a>
+                    </div>
+                    </div>
+                    <div class="section_project__container" data-aos="fade-up">
                             <div class="container__overlay">
                             <h3>Projecto</h3>
                     <a href="" class="section_projects__item"></a>
                     </div>
                     </div>
-                    <div class="section_project__container">
+                    <div class="section_project__container" data-aos="fade-up">
                             <div class="container__overlay">
                             <h3>Projecto</h3>
                     <a href="" class="section_projects__item"></a>
                     </div>
                     </div>
-                    <div class="section_project__container">
+                    <div class="section_project__container" data-aos="fade-up">
                             <div class="container__overlay">
                             <h3>Projecto</h3>
                     <a href="" class="section_projects__item"></a>
                     </div>
                     </div>
-                    <div class="section_project__container">
-                            <div class="container__overlay">
-                            <h3>Projecto</h3>
-                    <a href="" class="section_projects__item"></a>
-                    </div>
-                    </div>
-                    <div class="section_project__container">
-                            <div class="container__overlay">
-                            <h3>Projecto</h3>
-                    <a href="" class="section_projects__item"></a>
-                    </div>
-                    </div>
-                </div>
+                </div> 
             </section>
                 <h2 >ACERCA DE MI</h2>
             <section class="section_aboutme" id="aboutme">
-                <div class="section_aboutme__img">
+                <div class="section_aboutme__img" data-aos="fade-right">
                     <img class="aboutme--img" src="./IMGs/aboutme_img.png" alt="">
                 </div>
-                <div class="section_aboutme__text">
+                <div class="section_aboutme__text" data-aos="fade-left">
                      <h3>Conoceme un poco mas</h3>
                      <p>Hola!, soy Agustín, un desarrrollador web Full Stack independiente, resido en Argentina y ya cuento con varios años en el mundo de la programacion, me encuentro constantemente trabajando en proyectos y aprendiendo lenguajes nuevos. Soy en gran medida autodidacta y me adapto bien a cualquier entorno, por lo que se que puedo serte de utilidad.</p>
                      <br>
@@ -141,5 +145,12 @@
     <footer class="footer"> 
         <p class="footer__text">© 2026 Pagina desarrollada por Agustín E. Cuevas desde Argentina!. Todos los derechos reservados.</p>
     </footer>
+
+
+
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
