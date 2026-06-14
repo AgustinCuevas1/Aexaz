@@ -661,7 +661,7 @@ span h2 {
 .section_skills__grid {
     margin-bottom: 0;
     display: grid;
-    grid-template-columns: repeat(2, minmax(120px, 1fr));
+    grid-template-columns: repeat(1, minmax(120px, 1fr));
     gap: 1rem;
     padding: 40px 0;
     animation: softFadeUp 0.9s ease-out both;
