@@ -390,12 +390,6 @@ section {
     transition: padding .3s, box-shadow .3s, border .3s, transform .3s ease;
 }
 
-.section_responsive__container:hover {
-        padding: 22px 0px;
-        box-shadow: 0 0 30px rgb(12, 5, 88);
-        border: 2px solid rgba(23, 5, 88, 0.882);
-        transform: translateY(-2px);
-}
 
 .section_responsive__img {
     display: block;
