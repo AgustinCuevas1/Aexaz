@@ -661,7 +661,7 @@ span h2 {
 .section_skills__grid {
     margin-bottom: 0;
     display: grid;
-    grid-template-columns: repeat(1, minmax(100px, 1fr));
+    grid-template-columns: 100px;
     gap: 1rem;
     padding: 40px 0;
     animation: softFadeUp 0.9s ease-out both;
@@ -695,7 +695,14 @@ span h2 {
     padding: 1.5rem;
     align-items: center;
     justify-content: center;
+    transition: all .3s ease;
 }
+
+.section_responsive__container:hover {
+    padding: 1.3rem;
+    
+    
+    
 
 .section_responsive__img {
     padding: 0;
@@ -703,6 +710,7 @@ span h2 {
     width: 100%;
     max-width: 100%;
     max-height: none;
+    transition: all .3s ease;
 }
 
 .section_projects__grid {
