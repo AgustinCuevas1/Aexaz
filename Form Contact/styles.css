@@ -167,7 +167,7 @@ h1 {
 }
 
 .guion_parpadeo {
-    color: rgba(0, 0, 0, 0.712);
+    color: rgba(13, 10, 172, 0.71);
     animation: blink 1s step-end infinite;
 }
 
@@ -183,16 +183,52 @@ main {
 .container {
     display: flex;
     flex-direction: column;
-    border: 3px solid rgba(255, 255, 255, 0.507);
     border-radius: 10px;
     margin: auto;
     margin-top: 5rem;
     margin-bottom: 5rem;
-    width: 50%;
-    background-color: rgba(0, 0, 0, 0.068);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    max-width: 60vw;
+    width: 100%;
+    background-color: rgb(10, 10, 10);
+    position: relative;
 }
+
+
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.container::after, .container::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), transparent, blue);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -20;
+    padding: 5px;
+    border-radius: 10px;
+    animation: 3s spin linear infinite;
+}
+
+.container::before {
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+
 
 form {
     display: flex;
@@ -201,7 +237,7 @@ form {
 }
 
 .form__fieldset {
-    border: 3px solid rgba(255, 255, 255, 0.507);
+    border: 3px solid blue;
     padding: 2rem;
     margin-bottom: 2.5rem;
 }
@@ -223,12 +259,14 @@ label {
     color: rgba(0, 0, 0, 0.712);
 }
 .form__input:focus {
-    border: 3px solid rgba(0, 0, 0, 0.281);
-    outline: white;
+    border: 2.5px solid blue;
+    border-radius: 5px;
+    outline: blue;
 }
 .form__textarea:focus {
-    border: 3px solid rgba(0, 0, 0, 0.281);
-    outline: white;
+    border: 1px solid blue;
+    border-radius: 5px;
+    outline: blue;
 }
 
 .form__textarea {
@@ -255,7 +293,7 @@ select {
 .btn-submit:hover {
     margin-bottom: 0;
     transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.207);
+    box-shadow: 0 4px 10px rgba(1, 5, 250, 0.21);
     transition: box-shadow .3s ease, transform .3s ease;
 }
 
@@ -278,4 +316,136 @@ select {
 
 *::placeholder {
     font-family: sans-serif;
+}
+
+@media screen and (max-width:768px) {
+
+
+    h1 {
+        font-size: 1.5rem;
+        margin: 1rem 0 0 0;
+        padding: 0;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h2:not(h1 + h2) {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contenedor_h1 {
+        margin-top: 1rem;
+    }
+
+    .container {
+        max-width: 93%;
+        width: 100%;
+        margin: 1.5rem auto;
+        padding: 0;
+        border-radius: 8px;
+    }
+
+
+    form {
+        padding: 1.5rem 1rem;
+    }
+
+    .form__fieldset {
+        border: 2px solid blue;
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    legend {
+        padding: 0 0.5rem;
+        font-size: 0.85rem;
+        font-weight: bold;
+    }
+
+    label {
+        font-size: 0.9rem;
+        display: block;
+        margin-top: 0.5rem;
+    }
+
+    .form__input, .form__textarea {
+        margin: 0.5rem 0;
+        padding: 0.75rem 0.5rem;
+        width: 100%;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .form__input::placeholder, .form__textarea::placeholder {
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 0.9rem;
+    }
+
+    .form__input:focus, .form__textarea:focus {
+        border: 2px solid blue;
+        outline: none;
+        box-shadow: 0 0 5px rgba(0, 0, 255, 0.3);
+    }
+
+    .form__textarea {
+        resize: vertical;
+        min-height: 5rem;
+        max-height: 10rem;
+    }
+
+    select {
+        width: 100%;
+        padding: 0.75rem 0.5rem;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    select:focus {
+        border: 2px solid blue;
+        outline: none;
+    }
+
+    .btn-submit {
+        margin: 1.5rem auto 0;
+        padding: 0.75rem 2rem;
+        font-size: 1rem;
+        border: none;
+        border-radius: 4px;
+        background-color: rgb(12, 5, 88);
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-submit:hover {
+        background-color: rgb(30, 10, 150);
+        transform: none;
+    }
+
+    .btn-submit:active {
+        background-color: rgb(10, 5, 70);
+    }
+
+    .footer {
+        font-size: 12px;
+        padding: 15px;
+    }
+
+    .footer__text {
+        font-size: 0.85rem;
+    }
+
 }
