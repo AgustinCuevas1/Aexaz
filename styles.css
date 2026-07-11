@@ -786,24 +786,39 @@ section {
 }
 
 .fq-styles {
+    display: grid;
+    grid-template-rows: auto 0fr;
     margin-top: 2rem;
-    padding: 1rem;
+    padding: 1rem 1.2rem;
     border-top: 1.5px solid rgb(12, 5, 88);
     border-radius: 0;
     font-size: 1.4rem;
-    transition: border .3s, filter .3s;
+    overflow: hidden;
+    transition:
+        grid-template-rows 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+        border-color 0.35s ease,
+        box-shadow 0.35s ease,
+        transform 0.35s ease,
+        background-color 0.35s ease,
+        padding 0.35s ease;
 }
+
 .fq-styles:first-child {
     margin-top: 3rem;
 }
+
 .fq-styles[open] {
+    grid-template-rows: auto 1fr;
     border: 2px solid rgb(12, 5, 88);
-    filter: drop-shadow(0 0 3px rgba(12, 5, 88, 0.50));
-    transition: border 1s, filter 1s;
+    border-radius: 14px;
+    background: linear-gradient(135deg, rgba(12, 5, 88, 0.62), rgba(255, 255, 255, 0.04));
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(12, 5, 88, 0.16);
+    transform: translateY(-2px);
 }
 
 .fq-styles[open] .svg-fq {
-    transform: rotate(180deg);
+    transform: rotate(180deg) scale(1.02);
+    stroke: rgb(8, 43, 240);
 }
 
 .fq-question {
@@ -811,17 +826,41 @@ section {
     list-style: none;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    transition: color 0.25s ease;
+}
+
+.fq-styles[open] .fq-question {
+    color: rgb(8, 43, 240);
 }
 
 .fq-answer {
+    min-height: 0;
+    overflow: hidden;
     font-size: 1.1rem;
     font-family: Oswald;
-    padding: 1rem 1rem;
+    padding: 0 1rem;
+    opacity: 0;
+    max-height: 0;
+    transform: translateY(-8px);
+    transition:
+        opacity 0.35s ease,
+        transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+        max-height 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+        padding 0.3s ease;
+}
+
+.fq-styles[open] .fq-answer {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 12rem;
+    padding: 1rem 1rem 0;
 }
 
 .svg-fq {
     stroke: rgb(12, 5, 88);
-    transition: transform 0.3s ease;
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), stroke 0.25s ease;
     flex-shrink: 0;
     filter: drop-shadow(0 0 3px rgba(12, 5, 88, 0.55));
 }
@@ -1092,6 +1131,17 @@ section {
         padding: 2rem 1.5rem;
     }
 
+
+.frecuentquestions__section {
+    padding: 5rem 0.8rem;
+    margin-top: 50px;
+}
+
+.fq-styles[open] .fq-answer {
+    max-height: 22rem;
+    padding: 0.7rem 0.7rem 0;
+}
+
     .section_aboutme {
         grid-template-columns: minmax(0, 1fr);
         gap: 1.5rem;
@@ -1111,9 +1161,9 @@ section {
 
     .passarella__container {
         width: 100%;
-        border-left: 1px solid rgba(34, 4, 133, 0.7);
-        border-right: 1px solid rgba(34, 4, 133, 0.7);
-        box-shadow: -3px 0 0 rgba(34, 4, 133, 0.45), 3px 0 0 rgba(34, 4, 133, 0.45);
+        border-left: 3px solid rgba(34, 4, 133, 0.7);
+        border-right: 3px solid rgba(34, 4, 133, 0.7);
+        filter: drop-shadow(0 0 10px rgba(26, 1, 107, 0.45), 0 0 10px rgba(6, 2, 245, 0.45));
     }
 
     .footer {
