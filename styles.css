@@ -88,6 +88,10 @@ h3 {
     font-family: "Oswald";
     animation: slideInFromLeft 0.8s ease-out 0.4s both;
 }
+.h3-blue {
+    text-transform: uppercase;
+    color: rgb(6, 6, 161);
+}
 
 h2, h3, p {
     text-align: center;
@@ -252,7 +256,7 @@ p {
     stroke: aliceblue;
 }
 .svg-main:hover {
-    stroke: #0c0558;
+    stroke: #2216a1;
 }
 
 
@@ -533,16 +537,21 @@ section {
     font-size: 1em;
     font-weight: 900;
 }
+
+.h2-pagina-ideal {
+    margin-top: 7rem;
+}
+
 .section_responsive {
-    padding: 7rem;
+    padding: 3rem 7rem;
     display: grid;
     align-items: center;
     align-content: center;
     justify-items: center;
     justify-content: center;
     gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(min(100px, 100%), 1fr));
-    margin-bottom: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(120px, 100%), 1fr));
+    margin-bottom: 3rem;
     animation: softFadeUp 0.9s ease-out both;
 }
 
@@ -552,7 +561,7 @@ section {
     align-content: center;
     justify-items: center;
     justify-content: center;
-    border: 2px solid rgba(23, 5, 88, 0.01);
+    border: 2px solid rgba(255, 255, 255, 0.05);
     border-radius: 20px;
     padding: 3rem;
     gap: 1rem;
@@ -611,13 +620,13 @@ section {
     margin-top: 1rem;
     margin-bottom: 5rem;
     width: 90%;
-    border-left: 2px solid rgb(34, 4, 133);
-    border-right: 2px solid rgb(34, 4, 133);
+    border-left: 5px solid rgb(34, 4, 133);
+    border-right: 5px solid rgb(34, 4, 133);
     display: flex;
     overflow-x: auto;
     gap: 2em;
-    box-shadow: -5px 0 0 rgba(34, 4, 133, 0.699), 5px 0 0 rgba(34, 4, 133, 0.699);
 }
+
 .passarella__container::-webkit-scrollbar {
     display: none
 }
@@ -763,6 +772,58 @@ section {
     background-image: url("./IMGs/SamplePortfolio.png");
     background-size: cover;
     background-position: center;
+}
+
+
+.frecuentquestions__section {
+    padding: 5rem 15rem;
+    margin-top: 50px;
+}
+.frecuentquestions__container {
+    display: flex;
+    font-family: Oswald, Geneva, Tahoma, sans-serif;
+    flex-direction: column;
+}
+
+.fq-styles {
+    margin-top: 2rem;
+    padding: 1rem;
+    border-top: 1.5px solid rgb(12, 5, 88);
+    border-radius: 0;
+    font-size: 1.4rem;
+    transition: border .3s, filter .3s;
+}
+.fq-styles:first-child {
+    margin-top: 3rem;
+}
+.fq-styles[open] {
+    border: 2px solid rgb(12, 5, 88);
+    filter: drop-shadow(0 0 3px rgba(12, 5, 88, 0.50));
+    transition: border 1s, filter 1s;
+}
+
+.fq-styles[open] .svg-fq {
+    transform: rotate(180deg);
+}
+
+.fq-question {
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.fq-answer {
+    font-size: 1.1rem;
+    font-family: Oswald;
+    padding: 1rem 1rem;
+}
+
+.svg-fq {
+    stroke: rgb(12, 5, 88);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    filter: drop-shadow(0 0 3px rgba(12, 5, 88, 0.55));
 }
 
 
