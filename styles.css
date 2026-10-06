@@ -625,10 +625,14 @@ section {
     display: flex;
     overflow-x: auto;
     gap: 2em;
+    scrollbar-width: none;
+    scrollbar-color: blue;
 }
 
 .passarella__container::-webkit-scrollbar {
-    display: none
+    display: none;
+    color: blue;
+    
 }
 .passarella__group {
     padding: 2rem;
