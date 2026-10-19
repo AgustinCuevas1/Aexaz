@@ -24,7 +24,9 @@
             </ul>
         </div>
         <div>
-            <img class="nav__img" src="../IMGs/navbar icon.png" alt="">
+            <a href="../index.html" aria-label="Ir a la página principal">
+                <img class="nav__img" src="../IMGs/navbar icon.png" alt="Icono de AC development" title="Ac Development">
+            </a>
         </div>     
     </nav>
     </header>
@@ -33,15 +35,15 @@
             <div class="contenedor_h1">
             <h1>Formulario De Contacto<span class="guion_parpadeo">|</span></h1>
         </div>
-        <form>
+        <form action="https://formsubmit.co/infoaexas@gmail.com" method="POST">
             <fieldset class="form__fieldset">
                 <legend class=>INFORMACION PERSONAL</legend>
                 <label for="">Nombre Completo</label>
-                <input type="text" class="form__input" placeholder="Jhon Doe">
+                <input type="text" class="form__input" placeholder="Jhon Doe" name="Nombre">
                 <label for="">Correo Electronico</label>
-                <input type="email" class="form__input" placeholder="Ejemplo@gmail.com" required>
+                <input type="email" class="form__input" placeholder="Ejemplo@gmail.com" required name="Correo">
                 <label for="">Tipo</label>
-                <select name="" id="" class="form__input" required>
+                <select name="Tipo" id="" class="form__input" required>
                     <option value="emprise">Empresa</option>
                     <option value="comerce">Comercio</option>
                     <option value="independence">Independiente</option>
@@ -51,9 +53,13 @@
             <fieldset class="form__fieldset">
                 <legend class=>MENSAJE</legend>
                 <label for="">Contactate conmigo!</label>
-                <textarea name="" id="" class="form__textarea" placeholder="Deja tu mensaje" required></textarea>
+                <textarea name="Mensaje" id="" class="form__textarea" placeholder="Deja tu mensaje" required></textarea>
             </fieldset>
             <input type="submit" type="buttom" class="btn-submit">
+
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://agustincuevas1.github.io/Aexaz/">
+
         </form>
     </div>
     </main>
